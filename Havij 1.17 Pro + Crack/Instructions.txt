@@ -1,0 +1,19 @@
+##########################
+Provided By CuongQuach.com
+##########################
+
+---------------
+Instructions :
+---------------
+
+Install Havij PRO (Setup) >> [Do Not Launch After Installation]
+Copy >> Loader.exe (In Installation Directory)
+By Default :-  C:\Program Files (x86)\ITSecTeam\Havij Pro\
+Run (Loader.exe) >> [As Administrator]
+Click Register Button (That's It) Enjoy! Havij PRO :D
+
+[Note : Always Launch Havij PRO >> (From Loader.exe) To Avail Full Features]
+
+
+Website: https://cuongquach.com/
+

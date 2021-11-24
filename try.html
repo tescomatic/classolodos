@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/4f06ab69fc.js" crossorigin="anonymous"></script>
+    <script src="js/myjs.js" type="text/javascript" defer></script>
+    <title>Calculator</title>
+</head>
+<style>
+    .bd {
+        height: 440px;
+        width: 330px;
+        border-radius: 12px;
+        margin: auto;
+        margin-top: 40px;
+        background-color: rgba(124, 126, 131, 0.103);
+        box-shadow: 0 0 20px rgb(81, 90, 90);
+    }
+    
+    .cl {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 12px;
+        padding: 12px;
+    }
+    
+    .ll {
+        padding: 12px;
+    }
+    
+    .st {
+        display: inline;
+        padding: 8px;
+    }
+    
+    .int {
+        margin-top: 14px;
+        width: 100%;
+        height: 90px;
+        outline: none;
+        border: none;
+    }
+    
+    .bts {
+        margin: 2px;
+        height: auto;
+    }
+    
+    .inp {
+        width: 77.5px;
+        height: 48px;
+        border: none;
+        background-color: rgba(145, 157, 168, 0.233);
+    }
+    
+    .inp:hover {
+        border: 2px solid rgba(145, 157, 168, 0.719);
+        background-color: rgba(145, 157, 168, 0.507);
+    }
+    
+    .inp:focus {
+        background-color: rgba(145, 157, 168, 0.678);
+        outline: none;
+    }
+    
+    .inpm {
+        width: 77.5px;
+        height: 48px;
+        border: none;
+        background-color: rgba(202, 200, 200, 0.226);
+    }
+    
+    .inpm:hover {
+        border: 2px solid rgba(145, 157, 168, 0.719);
+        background-color: rgba(145, 157, 168, 0.507);
+    }
+    
+    .inpm:focus {
+        background-color: rgba(145, 157, 168, 0.678);
+        outline: none;
+    }
+    
+    .inpx {
+        width: 77.5px;
+        height: 48px;
+        border: none;
+        background-color: rgba(235, 12, 12, 0.226);
+    }
+    
+    .inpx:hover {
+        border: 2px solid rgba(148, 72, 72, 0.719);
+        background-color: rgba(170, 76, 76, 0.507);
+    }
+    
+    .inpx:focus {
+        background-color: rgba(59, 4, 4, 0.678);
+        outline: none;
+    }
+</style>
+
+<body>
+    <div class="bd">
+        <div class="cl">Calculator</div>
+        <span class="ll fas fa-grip-lines"></span>
+        <h5 class="st">Standard</h5>
+        <input type="text" id="screen" class="int" disabled/>
+
+        <div class="bts">
+            <button id="b1" onclick="btnclick('%')" class="inp">%</button> <button id="del" onclick="btndel()" class="inp">C</button>
+            <button id="delx" onclick="btndelx()" class="inp">del</button> <button onclick="btnclick('/')" id="img" class="inp">/</button>
+        </div>
+        <div class="bts">
+            <button id="box3" onclick="btnclick('7')" class="inpm">7</button> <button onclick="btnclick('8')" id="box3" class="inpm">8</button>
+            <button onclick="btnclick('9')" id="img2" class="inpm">9</button> <button onclick="btnclick('*')" id="img" class="inp">*</button>
+        </div>
+        <div class="bts">
+            <button id="box1" onclick="btnclick('4')" class="inpm">4</button> <button onclick="btnclick('5')" id="box3" class="inpm">5</button>
+            <button onclick="btnclick('6')" id="img2" class="inpm">6</button> <button onclick="btnclick('-')" id="img" class="inp">-</button>
+        </div>
+        <div class="bts">
+            <button id="box1" onclick="btnclick('1')" class="inpm">1</button> <button onclick="btnclick('2')" id="box3" class="inpm">2</button>
+            <button onclick="btnclick('3')" id="img2" class="inpm">3</button> <button onclick="btnclick('+')" id="img" class="inp">+</button>
+        </div>
+        <div class="bts">
+            <button id="p#" class="inp">#</button> <button onclick="btnclick('0')" id="box3" class="inpm">0</button>
+            <button onclick="btnclick('.')" id="img2" class="inp">.</button> <button id="result" onclick="answer()" class="inpx">=</button>
+        </div>
+    </div>
+    <script src="../bootstrap/js/popper.min.js"></script>
+    <script src="../bootstrap/js/jquery.min.js"></script>
+    <script src="../bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

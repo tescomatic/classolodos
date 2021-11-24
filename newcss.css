@@ -1,0 +1,38 @@
+div {
+    background: rebeccapurple;
+    height: 200px;
+    width: 200px;
+    animation-name: myanim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes myanim {
+    0% {}
+    25% {
+        margin-left: 700px;
+        background: red;
+    }
+    50% {
+        margin-left: 700px;
+        margin-top: 400px;
+        background: green;
+    }
+    75% {
+        margin-left: 0px;
+        margin-top: 400px;
+        background: black;
+    }
+    100% {
+        margin-left: 0px;
+        margin-top: 0px;
+        background: teal;
+    }
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    width: 30%;
+}

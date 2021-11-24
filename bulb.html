@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two input One button</title>
+</head>
+<body>
+    <input type="text" id="finput"><br>
+    <input type="text" id="inbtw"><br>
+    <input type="text" id="sinput"><br>
+    <h1>Result: <span id="hh"></span></h1>
+    <button onclick="sum()">Calculate</button>
+
+
+
+
+    <div id="imm">
+        <img src="/images/bulboff.gif" id="ima" alt="">
+        <button id="controls" onclick="handleBoth()">ON</button>
+    </div>
+</body>
+</html>
+<script>
+    let {log}=console
+    function sum() {
+        let a=document.getElementById('finput').value;
+        let b=document.getElementById('sinput').value;
+        let signs=document.getElementById('inbtw').value;
+        if (signs=="+") {
+            document.getElementById('hh').innerHTML=Number(a)+Number(b);
+        }
+        else if (signs=="-"){
+            document.getElementById('hh').innerHTML=Number(a)-Number(b);
+        }
+        else if (signs=="*"){
+            document.getElementById('hh').innerHTML=Number(a)*Number(b);
+        }
+        else if (signs=="/"){
+            document.getElementById('hh').innerHTML=Number(a)/Number(b);
+        }
+        else{
+            document.getElementById('hh').innerHTML='error'
+        }
+           
+    }
+
+    let swit=true;
+    let controls=document.getElementById('controls')
+    let imag=document.getElementById('image')
+    controls.innerHTML="ON"
+    function handleBoth(value) {
+
+        if (swit==false) {
+            document.getElementById('ima').src ='images/bulboff.gif';
+            controls.innerHTML="ON"
+            swit=true;
+        }
+        else{
+            document.getElementById('ima').src ='images/bulbon.gif';
+            controls.innerHTML="OFF"
+            swit=false;
+        }
+    }
+
+ let times= setInterval(timer, 2000);
+
+
+  function timer(){
+   //    log("Bulo"+new Date())
+  }
+
+ 
+
+</script>
