@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 alert("hello world");
+
 <head>
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css" />
     <!-- <script src="https://kit.fontawesome.com/ccab2e2008.js" crossorigin="anonymous"></script> -->
-   <script  src="./js/myjs.js" type="module"></script>
-  
+    <script src="./js/myjs.js" type="module"></script>
+
 
     <style>
         body {
@@ -15,20 +16,23 @@ alert("hello world");
             margin: 0;
             background-color: #F9F9F9;
         }
-
+        
         .naicon {
             font-size: 25px
         }
-        #full{
+        
+        #full {
             width: 325px;
             height: 500px;
             background-color: rgba(0, 0, 0, 0.8);
             margin: auto;
         }
-        body{
+        
+        body {
             color: white;
         }
-        .dim{
+        
+        .dim {
             color: white;
             border: none;
             width: 75px;
@@ -37,14 +41,16 @@ alert("hello world");
             height: 44px;
             font-size: 16px;
         }
-        .dim:hover{
-            background-color: rgba(0, 0, 0, 0.5);
-
-        }
-        .dark:hover{
+        
+        .dim:hover {
             background-color: rgba(0, 0, 0, 0.5);
         }
-        .dark{
+        
+        .dark:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .dark {
             color: white;
             border: none;
             width: 75px;
@@ -58,7 +64,7 @@ alert("hello world");
 
 </head>
 
-<body >
+<body>
 
     <nav class="p-3 d-flex justify-content-between bg-white shadow">
         <div>
@@ -95,28 +101,28 @@ alert("hello world");
         <div id="full">
             <div style="display: flex; justify-content: space-between; padding: 5px;">
                 <span style="font-size: 18px;">Calculator</span>
-                    <div style="display: flex; justify-content: space-between; width: 120px;">
-                        <i style="letter-spacing: -2px; font-weight: 700;">--</i>
-                        <i class="fa fa-square-o"></i>
-                        <i class="material-icons  " data-bs-dismiss="#full" type="button"  aria-label="close" >close</i>
-                     </div>
+                <div style="display: flex; justify-content: space-between; width: 120px;">
+                    <i style="letter-spacing: -2px; font-weight: 700;">--</i>
+                    <i class="fa fa-square-o"></i>
+                    <i class="material-icons  " data-bs-dismiss="#full" type="button" aria-label="close">close</i>
+                </div>
             </div>
             <div style="display: inline-flex;">
                 <i class="material-icons" style="margin-left: 15px;">menu</i>
                 <p style="font-size: 20px; font-weight: 700; margin-left: 15px; display: inline;">Standard</p>
                 <i class="material-icons" style="margin-left: 24px;">cast</i>
                 <i class="material-icons" style="margin-left: 100px;">access_time</i>
-            </div> 
+            </div>
             <div style="height: 75px; width: 324px; font-weight: 700;">
                 <div style=" text-align: right;   ">
-                    <span  class="d-block">
+                    <span class="d-block">
                         <small  id="second_d"></small>
                         <small id="myop"></small>
                     </span>
-                    <span  id="first_d" class="d-block h5"></span>
-                     <span id="clear" class="d-block" class="">0</span>
-                    </div>
-                
+                    <span id="first_d" class="d-block h5"></span>
+                    <span id="clear" class="d-block" class="">0</span>
+                </div>
+
             </div>
             <div style="display: flex; justify-content: space-between; padding: 2px 7px;">
                 <span style="color: rgba(255, 255, 255, 0.5);">MC</span>
@@ -136,31 +142,31 @@ alert("hello world");
                 <button class="dim"><sup><small>1</small></sup> / <sub><small style="font-style: italic;">x</small></sub></button>
                 <button class="dim">x <sup><small>2</small></sup></button>
                 <button class="dim"> <sup><small>2</small></sup> √x </button>
-                <button class="dim" style="font-weight: 700;font-style: italic;"  onclick="operators('/')">÷</button>
+                <button class="dim" style="font-weight: 700;font-style: italic;" onclick="operators('/')">÷</button>
             </div>
             <div style="display: flex; justify-content: space-between; padding: 3px 6px; margin: 0px;">
                 <button class="dark" id="seven" onclick="number(7)">7</button>
                 <button class="dark" onclick="number(8)" id="eight">8</button>
-                <button class="dark"  onclick="number(9)" id="eight">9</button>
-                <button class="dim"    onclick="operators('*')">X</button>
+                <button class="dark" onclick="number(9)" id="eight">9</button>
+                <button class="dim" onclick="operators('*')">X</button>
             </div>
             <div style="display: flex; justify-content: space-between; padding: 3px 6px; margin: 0px;">
                 <button class="dark" onclick="number(4)">4</button>
-                <button class="dark"  onclick="number(5)">5</button>
-                <button class="dark"  onclick="number(6)">6</button>
-                <button class="dim" style="letter-spacing: -2px;" onclick="operators('-')"  >--</button>
+                <button class="dark" onclick="number(5)">5</button>
+                <button class="dark" onclick="number(6)">6</button>
+                <button class="dim" style="letter-spacing: -2px;" onclick="operators('-')">--</button>
             </div>
             <div style="display: flex; justify-content: space-between; padding: 3px 6px; margin: 0px;">
-                <button class="dark"  onclick="number(1)">1</button>
+                <button class="dark" onclick="number(1)">1</button>
                 <button class="dark" onclick="number(2)">2</button>
                 <button class="dark" onclick="number(3)">3</button>
-                <button class="dim" onclick="operators('+')" id="ope"  >+</button>
+                <button class="dim" onclick="operators('+')" id="ope">+</button>
             </div>
             <div style="display: flex; justify-content: space-between; padding: 3px 6px; margin: 0px;">
                 <button class="dark"><sup><small>+</small></sup>/ <sub><small>-</small></sub></button>
-                <button class="dark"  onclick="number(0)">0</button>
+                <button class="dark" onclick="number(0)">0</button>
                 <button class="dark">.</button>
-                <button class="dim"  style="background-color: royalblue;" onclick="result()" >=</button>
+                <button class="dim" style="background-color: royalblue;" onclick="result()">=</button>
             </div>
         </div>
 
@@ -254,8 +260,7 @@ alert("hello world");
 
         <div class="card" hidden>
             <div class="clearfix mt-3 w-75 mx-auto">
-                <button class="float-left btn btn-warning text-light w-50 forms" onclick="changeL()"
-                    id="btnl">Signin</button>
+                <button class="float-left btn btn-warning text-light w-50 forms" onclick="changeL()" id="btnl">Signin</button>
                 <button class="float-right btn w-50 forms" onclick="changeS()" id="btns">Signup</button>
             </div>
             <div class="p-5" id="login">
@@ -314,14 +319,17 @@ alert("hello world");
 
     </div>
 
+    <h1>
+        Adewole Ogunba
+    </h1>
+
 
     <!-- <h4 id="title">Hello world</h4> -->
 
     <!-- <h1>Hello,<span id="display"></span> <span class="display-5 text-secondary bg-info ">|</span></h1> -->
     <script src="bootstrap/js/popper.min.js "></script>
     <script src="bootstrap/js/jquery.min.js "></script>
-    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <!-- <script src="bootstrap/dist//js/bootstrap.bundle.min.\js "></script> -->
 
     <button class="  btn" onclick="change()">---</button><button class="btn" onclick="change()"><b>-----</b></button>
@@ -330,10 +338,10 @@ alert("hello world");
     <ul id="ul">
 
     </ul>
-  
+
 
     https://github.com/tescomatic/classolodos.git
-  
+
 
     <h1 id="diff" class="text-danger"></h1>
     <!-- let a = fetch('https://jsonplaceholder.typicode.com/photos/1').then(response => response.json()) .then(data => { title.innerText = data.title; img.src = data.url console.log(data) }) -->
@@ -341,226 +349,229 @@ alert("hello world");
 
 </html>
 <script>
-var  names="Vic";
-let fruits=['Mango','Orange','Cashew',"Apple"];
-let obj={name:'Teslim',school:"SQI",phone:'1234567890'};
-let sent=['My name is Salaudeen Teslim Olamilekan','I am 10 years old','I study at SQI college of ICT']
-// for (let index = 0; index < fruits.length; index++) {
-//     alert(fruits[index])
-    
-// }
-// fruits.forEach(function(ele,i){
-//     alert(ele+' '+i)
-// });
+    var names = "Vic";
+    let fruits = ['Mango', 'Orange', 'Cashew', "Apple"];
+    let obj = {
+        name: 'Teslim',
+        school: "SQI",
+        phone: '1234567890'
+    };
+    let sent = ['My name is Salaudeen Teslim Olamilekan', 'I am 10 years old', 'I study at SQI college of ICT']
+        // for (let index = 0; index < fruits.length; index++) {
+        //     alert(fruits[index])
 
-// for (const key in obj) {
-//     // if (Object.hasOwnProperty.call(object, key)) {
-//     //     const element = object[key];
-        
-//     // }
-//     alert(key)
-// }
+    // }
+    // fruits.forEach(function(ele,i){
+    //     alert(ele+' '+i)
+    // });
 
-// for (const iterator of fruits) {
-//     alert(iterator)
-// }
+    // for (const key in obj) {
+    //     // if (Object.hasOwnProperty.call(object, key)) {
+    //     //     const element = object[key];
+
+    //     // }
+    //     alert(key)
+    // }
+
+    // for (const iterator of fruits) {
+    //     alert(iterator)
+    // }
 
 
 
-    
+
     let {
         log
     } = console;
 
-   // let sentences=['My name is Teslim Salaudeen','I teach at SQI college of ICT','My head carry book'];
+    // let sentences=['My name is Teslim Salaudeen','I teach at SQI college of ICT','My head carry book'];
 
 
 
 
 
-let index=0;
-let words=""
-let w_index=0;
+    let index = 0;
+    let words = ""
+    let w_index = 0;
 
-function start(){
-    words=sent[index];
-    writes()
-}
-
-function writes(){
-    diff.innerHTML+=words[w_index];
-
-    setTimeout(() => {
-        if (words[w_index+1]) {
-            w_index++
+    function start() {
+        words = sent[index];
         writes()
-        }
-        else{
-            w_index=0;
-            delet()
-        }
-       
-    },50);
-   
-function delet(){
-
-    if (diff.innerHTML=='') {
-       if (!sent[ index+1]) {
-           index=-1
-       }
-       index++;
-        start()
-        return;
     }
 
-    diff.innerHTML=diff.innerHTML.slice(0,diff.innerHTML.length-1);
+    function writes() {
+        diff.innerHTML += words[w_index];
 
-    setTimeout(() => {
-        delet()
-    }, 50);
+        setTimeout(() => {
+            if (words[w_index + 1]) {
+                w_index++
+                writes()
+            } else {
+                w_index = 0;
+                delet()
+            }
 
-}
-}
+        }, 50);
 
-start()
+        function delet() {
 
+            if (diff.innerHTML == '') {
+                if (!sent[index + 1]) {
+                    index = -1
+                }
+                index++;
+                start()
+                return;
+            }
 
+            diff.innerHTML = diff.innerHTML.slice(0, diff.innerHTML.length - 1);
 
+            setTimeout(() => {
+                delet()
+            }, 50);
 
-    
+        }
+    }
 
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-//         var canvas = document.getElementById("canfas");
-// var ctx = canvas.getContext("2d");
-// ctx.fillStyle = "#FF0000";
-// ctx.fillRect(10, 50, 150, 75);
-// ctx.beginPath();
-// ctx.arc(95, 50, 40, 0, 2 * Math.PI);
-// ctx.stroke();
-let x,y;
-let x2,y2;
-let canDraw=false
-let thick=''
-
-canfas.onmousedown=function(e){
-    canDraw=true;
-   x= e.offsetX
-   y= e.offsetY
-   canfas.onmousemove=function(e){
-
-  if (canDraw) {
-    x2=e.offsetX
-    y2= e.offsetY
-    draw()
-    x= e.offsetX
-   y= e.offsetY
-
-  }
-}
-
-canfas.onmouseup=function(e){
-    canDraw=false 
-    // canfas.removeEventListener('mousemove',function(e){
-    //     alert()
-    // })
-}
-
-}
-
-
-function change(){
-    thick=='' ? thick='10' : thick='1'
-}
-
-
-
-
-function draw(){
-    
-let canfas=document.getElementById('canfas');
-let ctx=canfas.getContext('2d');
-ctx.fillStyle="red";
-//ctx.fillRect(20,20,100,50)
-ctx.moveTo(x, y);
-ctx.lineTo(x2, y2);
-ctx.strokeStyle='red'
-ctx.lineWidth=thick
-ctx.stroke();
-}
+    start()
 
 
 
 
 
 
-// let a={name:"Teslim",age:10,phone:1234567890,hobbies:['coding','Eating',"Sleeping"],stacks:{names:["Javascript","Angular"],level:60}};
 
 
-//   function Human(name,age,eyes,legs){
-//       this.name=name || "HUman"
-//       this.age=age
-//       this.eyes=eyes || 2;
-//       this.legs=legs
-//       this.CanWalk=function(){
-//                 return this.legs ==2;
-
-//       }
-
-//       this.info=function(){
-//           return `The name is ${this.name}, and the age is ${this.age}`
-//       }
-//   }  
 
 
-// class Human{
-     
-//          constructor(name,age,eyes,legs){
 
-           
-//             this.name=name || "HUman"
-//       this.age=age
-//       this.eyes=eyes || 2;
-//       this.legs=legs,
-     
-//       this.CanWalk=function(){
-//                 return this.legs ==2;
 
-//       }
 
-    
 
-//       this.info=function(){
-//           return `The name is ${this.name}, and the age is ${this.age}`
-//       }
-//          }
-// }
 
-//   let adam=new Human("Adam",10,2,0);
-// //   log(adam.info)
 
-// class Adam extends Human{
-//         constructor(){
-//             super();
-//             this.color="bloack";
-//             this.gender="MAle"
-//         }
-// }
-// let n=new Adam('Adam')
 
-//log(n)
+
+
+
+    //         var canvas = document.getElementById("canfas");
+    // var ctx = canvas.getContext("2d");
+    // ctx.fillStyle = "#FF0000";
+    // ctx.fillRect(10, 50, 150, 75);
+    // ctx.beginPath();
+    // ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+    // ctx.stroke();
+    let x, y;
+    let x2, y2;
+    let canDraw = false
+    let thick = ''
+
+    canfas.onmousedown = function(e) {
+        canDraw = true;
+        x = e.offsetX
+        y = e.offsetY
+        canfas.onmousemove = function(e) {
+
+            if (canDraw) {
+                x2 = e.offsetX
+                y2 = e.offsetY
+                draw()
+                x = e.offsetX
+                y = e.offsetY
+
+            }
+        }
+
+        canfas.onmouseup = function(e) {
+            canDraw = false
+                // canfas.removeEventListener('mousemove',function(e){
+                //     alert()
+                // })
+        }
+
+    }
+
+
+    function change() {
+        thick == '' ? thick = '10' : thick = '1'
+    }
+
+
+
+
+    function draw() {
+
+        let canfas = document.getElementById('canfas');
+        let ctx = canfas.getContext('2d');
+        ctx.fillStyle = "red";
+        //ctx.fillRect(20,20,100,50)
+        ctx.moveTo(x, y);
+        ctx.lineTo(x2, y2);
+        ctx.strokeStyle = 'red'
+        ctx.lineWidth = thick
+        ctx.stroke();
+    }
+
+
+
+
+
+
+    // let a={name:"Teslim",age:10,phone:1234567890,hobbies:['coding','Eating',"Sleeping"],stacks:{names:["Javascript","Angular"],level:60}};
+
+
+    //   function Human(name,age,eyes,legs){
+    //       this.name=name || "HUman"
+    //       this.age=age
+    //       this.eyes=eyes || 2;
+    //       this.legs=legs
+    //       this.CanWalk=function(){
+    //                 return this.legs ==2;
+
+    //       }
+
+    //       this.info=function(){
+    //           return `The name is ${this.name}, and the age is ${this.age}`
+    //       }
+    //   }  
+
+
+    // class Human{
+
+    //          constructor(name,age,eyes,legs){
+
+
+    //             this.name=name || "HUman"
+    //       this.age=age
+    //       this.eyes=eyes || 2;
+    //       this.legs=legs,
+
+    //       this.CanWalk=function(){
+    //                 return this.legs ==2;
+
+    //       }
+
+
+
+    //       this.info=function(){
+    //           return `The name is ${this.name}, and the age is ${this.age}`
+    //       }
+    //          }
+    // }
+
+    //   let adam=new Human("Adam",10,2,0);
+    // //   log(adam.info)
+
+    // class Adam extends Human{
+    //         constructor(){
+    //             super();
+    //             this.color="bloack";
+    //             this.gender="MAle"
+    //         }
+    // }
+    // let n=new Adam('Adam')
+
+    //log(n)
 
 
 
@@ -3904,5 +3915,5 @@ ctx.stroke();
     //         }
     //     }
 
-    //     //   
+    //     //
 </script>
